@@ -1,0 +1,3 @@
+This repository demonstrates a common closure issue in TypeScript when using setTimeout inside a loop. The problem arises because the setTimeout callbacks don't capture the value of 'i' at the time they are created, instead they capture a reference to 'i'. This means that by the time the callbacks finally execute, the loop has already finished and 'i' holds its final value. 
+
+The `bug.ts` file showcases the problematic code, and `bugSolution.ts` provides a corrected version.
